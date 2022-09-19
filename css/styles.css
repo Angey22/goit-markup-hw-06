@@ -648,8 +648,8 @@ intended for centering and limiting the content of site elements in width. */
   transform: translate(-50%, -50%) scale(1);
 
   /* Geometry */
-  width: 530px;
-  height: 580px;
+  width: 528px;
+  height: 581px;
   border-radius: 4px;
   padding: 40px;
 
@@ -692,12 +692,116 @@ intended for centering and limiting the content of site elements in width. */
 }
 
 .modal-window-title {
+  /* Geometry */
+  margin-bottom: 12px;
+
   /* Text */
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
+}
+
+.form-field {
+  /* Position */
+    position: relative;
+
+  /* Geometry */
+  /* outline: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+}  
+.form-label {
+  /* Geometry */
+  margin-bottom: 4px;
+/* Text */
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.form-input {
+    width: 100%;
+
+    /* Geometry */
+    margin: 0;
+    padding: 12px 15px 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.form-field:not(:first-child) {
+  margin-top: 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  /* transform: translateY(-50%); */
+
+  width: 20px;
+  height: 20px;
+  /* background-color: tomato; */
+  color: #212121;
+
+  fill: currentColor;
+}
+
+.form-input:focus ~ .icon {
+  /* background-color: lime; */
+  color: #2196f3;
+}
+
+.comment {
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  /* font-size: inherit; */
+  /* line-height: 1; */
+  color: var(--secondary-text-color);
+}
+
+.comment::placeholder {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field-check {
+  /* Geometry */
+  margin: 20px;
+  margin-bottom: 30px;
+
+  /* Text */
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+
+  outline: 1px solid lime;
+}
+
+.form-btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 4px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 /* Наші роботи, section in 'main' on page portfolio.html */

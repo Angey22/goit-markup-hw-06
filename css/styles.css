@@ -705,30 +705,30 @@ intended for centering and limiting the content of site elements in width. */
 
 .form-field {
   /* Position */
-    position: relative;
+  position: relative;
 
   /* Geometry */
   /* outline: 1px solid blue; */
   display: flex;
   flex-direction: column;
-}  
+}
 .form-label {
   /* Geometry */
   margin-bottom: 4px;
-/* Text */
+  /* Text */
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.01em;
 }
 
 .form-input {
-    width: 100%;
+  width: 100%;
 
-    /* Geometry */
-    margin: 0;
-    padding: 12px 15px 12px 42px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  /* Geometry */
+  margin: 0;
+  padding: 12px 15px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .form-field:not(:first-child) {
@@ -750,8 +750,12 @@ intended for centering and limiting the content of site elements in width. */
   fill: currentColor;
 }
 
+.form-input:focus {
+  outline: 0 solid var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
+}
+
 .form-input:focus ~ .icon {
-  /* background-color: lime; */
   color: #2196f3;
 }
 
@@ -786,22 +790,21 @@ intended for centering and limiting the content of site elements in width. */
 }
 
 .form-btn {
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin: 0 auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: #ffffff;
 
-    border: none;
-    border-radius: 4px;
-    background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+  border: none;
+  border-radius: 4px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Наші роботи, section in 'main' on page portfolio.html */

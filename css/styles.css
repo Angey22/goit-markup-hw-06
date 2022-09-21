@@ -266,6 +266,7 @@ body {
 
 .footer-social-block {
   padding-top: 12px;
+  margin-right: 93px;
 }
 
 .social-list {
@@ -274,7 +275,8 @@ body {
   justify-content: center;
 }
 
-.social-list-title {
+.social-list-title,
+.subscription-title {
   /* Geometry */
   margin-bottom: 20px;
 
@@ -309,12 +311,12 @@ body {
   fill: var(--complementary-text-color);
 
   /* Animation execution options */
-  transition: background-color 250ms var(--timing-function); /* + */
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-link-footer:hover,
 .social-link-footer:focus {
-  background-color: var(--accent-text-color); /* ??? */
+  background-color: var(--accent-text-color);
 }
 
 .social-link-team {
@@ -322,14 +324,85 @@ body {
   fill: #afb1b8;
 
   /* Animation execution options */
-  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function); /* + */
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .social-link-team:hover,
 .social-link-team:focus {
-  background-color: var(--accent-text-color); /* ??? */
+  background-color: var(--accent-text-color);
   /* for SVG icon with id: 'icon-instagram'; 'icon-twitter'; 'icon-facebook'; 'icon-linkedin; */
-  fill: #fff; /* ??? */
+  fill: #fff;
+}
+
+.footer-subscription-block {
+  /* Geometry */
+  padding-top: 12px;
+}
+
+.subscription-form {
+  /* Geometry */
+  display: flex;
+  align-items: center;
+}
+
+.subscription-input {
+  /* Geometry */
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+
+  /* Text */
+  color: rgba(255, 255, 255, 0.6);
+
+  /* Decor */
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscription-input::placeholder {
+  /* Text */
+  font-size: 16px;
+  line-height: 1, 25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+  /* Geometry */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+
+  /* Decor */
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  /* Animation execution options */
+  transition: background-color 250ms var(--timing-function);
+}
+
+.subscription-btn-text {
+  /* Geometry */
+  display: block;
+  margin-right: 10px;
+
+  /* Text */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--complementary-text-color);
+}
+
+.subscription-btn:hover {
+  background-color: #188ce8;
 }
 
 /* Шапка - "Hero" */
@@ -708,7 +781,6 @@ intended for centering and limiting the content of site elements in width. */
   position: relative;
 
   /* Geometry */
-  /* outline: 1px solid blue; */
   display: flex;
   flex-direction: column;
 }
@@ -729,33 +801,39 @@ intended for centering and limiting the content of site elements in width. */
   padding: 12px 15px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.2;
+
+  /* Animation execution options */
+  transition: border 250ms var(--timing-function);
 }
 
 .form-field:not(:first-child) {
   margin-top: 10px;
 }
 
-.icon {
+.form-icon {
   position: absolute;
   top: 50%;
   left: 12px;
 
-  /* transform: translateY(-50%); */
-
   width: 20px;
   height: 20px;
-  /* background-color: tomato; */
   color: #212121;
 
   fill: currentColor;
+
+  /* Animation execution options */
+  transition: color 250ms var(--timing-function);
 }
 
 .form-input:focus {
-  outline: 0 solid var(--accent-text-color);
+  outline: 0;
   border: 1px solid var(--accent-text-color);
 }
 
-.form-input:focus ~ .icon {
+.form-input:focus ~ .form-icon {
   color: #2196f3;
 }
 
@@ -764,8 +842,8 @@ intended for centering and limiting the content of site elements in width. */
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* font-size: inherit; */
-  /* line-height: 1; */
+  font-size: 12px;
+  line-height: 1.2;
   color: var(--secondary-text-color);
 }
 
@@ -778,15 +856,78 @@ intended for centering and limiting the content of site elements in width. */
 
 .form-field-check {
   /* Geometry */
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
   margin-bottom: 30px;
 
   /* Text */
   text-align: center;
   font-size: 14px;
   line-height: 1.7;
+}
 
-  outline: 1px solid lime;
+/* Custom checkbox style */
+.checkbox-label {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-input {
+  /* visually-hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-icon {
+  /* Geometry */
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  /* Decor */
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  /* Animation execution options */
+  transition: border 250ms var(--timing-function);
+}
+
+.checkbox-icon-svg {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox-input:checked ~ .checkbox-icon {
+  border: none;
+}
+
+.checkbox-input:checked ~ .checkbox-icon-svg {
+  visibility: visible;
+}
+
+.checkbox-input:focus ~ .checkbox-icon {
+  outline: 0;
+  border-color: var(--accent-text-color);
+}
+
+.checkbox-text {
+  display: block;
+}
+
+.checkbox-link {
+  display: block;
+  color: var(--accent-text-color);
 }
 
 .form-btn {
@@ -803,8 +944,17 @@ intended for centering and limiting the content of site elements in width. */
 
   border: none;
   border-radius: 4px;
-  background: #2196f3;
+  background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  /* Animation execution options */
+  transition: background-color 250ms var(--timing-function);
+}
+
+.form-btn:hover {
+  background-color: #188ce8;
 }
 
 /* Наші роботи, section in 'main' on page portfolio.html */

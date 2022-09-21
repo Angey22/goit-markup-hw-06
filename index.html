@@ -445,6 +445,21 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="footer-subscription-block">
+                <h3 class="subscription-title">підпишіться на розсилку</h3>
+                <form class="subscription-form">
+                    <label>
+                        <input class="subscription-input" type="email" name="newsletter" placeholder="E-mail">
+                    </label>
+                    <button class="subscription-btn" type="submit">
+                        <span class="subscription-btn-text">Підписатися</span>
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
 
@@ -467,7 +482,7 @@
                     name="name"
                     id="name"
                     placeholder=" ">
-                    <svg width="18" height="18" class="icon">
+                    <svg width="18" height="18" class="form-icon">
                         <use href="./images/icons.svg#icon-black-person"></use>
                     </svg>
                 </div>
@@ -480,7 +495,7 @@
                     name="tel"
                     id="tel"
                     placeholder=" ">
-                    <svg width="18" height="18" class="icon">
+                    <svg width="18" height="18" class="form-icon">
                         <use href="./images/icons.svg#icon-black-phone"></use>
                     </svg>
                 </div>
@@ -493,18 +508,24 @@
                     name="mail"
                     id="mail"
                     placeholder=" ">
-                    <svg width="18" height="18" class="icon">
+                    <svg width="18" height="18" class="form-icon">
                         <use href="./images/icons.svg#icon-black-email"></use>
                     </svg>
                 </div>
 
                 <div class="form-field">
                     <label for="comment" class="form-label">Коментар</label>
-                    <textarea name="comment" id="comment" rows="5" placeholder="Введіть текст" class="comment form-input"></textarea>
+                    <textarea name="comment" id="comment" rows="6" placeholder="Введіть текст" class="comment form-input"></textarea>
                 </div>
                 <div class="form-field-check">
-                    <input type="checkbox" name="policy" id="policy">
-                    <label for="policy">Погоджуюся з розсилкою та приймаю <a href=""> Умови договору</a>
+                    <label class="checkbox-label">
+                        <input class="checkbox-input" type="checkbox" name="checkbox" value="terms-&-newsletter">
+                        <span class="checkbox-icon"></span>
+                        <svg class="checkbox-icon-svg" width="16px" height="15px">
+                            <use href="../images/icons.svg#icon-check"></use>
+                        </svg>
+                        <span class="checkbox-text">Погоджуюся з розсилкою та приймаю&nbsp;</span>
+                        <a class="checkbox-link" href="#">Умови договору</a>
                     </label>
                 </div>
         

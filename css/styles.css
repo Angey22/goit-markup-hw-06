@@ -787,6 +787,7 @@ intended for centering and limiting the content of site elements in width. */
 .form-label {
   /* Geometry */
   margin-bottom: 4px;
+
   /* Text */
   font-size: 12px;
   line-height: 1.2;
@@ -794,14 +795,14 @@ intended for centering and limiting the content of site elements in width. */
 }
 
 .form-input {
-  width: 100%;
-
   /* Geometry */
+  width: 100%;
   margin: 0;
   padding: 12px 15px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
+  /* Text */
   font-size: 12px;
   line-height: 1.2;
 
@@ -814,10 +815,12 @@ intended for centering and limiting the content of site elements in width. */
 }
 
 .form-icon {
+  /* Position */
   position: absolute;
   top: 50%;
   left: 12px;
 
+  /* Geometry */
   width: 20px;
   height: 20px;
   color: #212121;
@@ -838,16 +841,22 @@ intended for centering and limiting the content of site elements in width. */
 }
 
 .comment {
+  /* Geometry */
   padding: 12px 16px;
   resize: none;
+
+  /* Decor */
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  /* Text */
   font-size: 12px;
   line-height: 1.2;
   color: var(--secondary-text-color);
 }
 
 .comment::placeholder {
+  /* Text */
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -897,27 +906,19 @@ intended for centering and limiting the content of site elements in width. */
   /* Decor */
   border: 2px solid #212121;
   border-radius: 2px;
-
-  /* Animation execution options */
-  transition: border 250ms var(--timing-function);
-}
-
-.checkbox-icon-svg {
-  visibility: hidden;
-  position: absolute;
-  left: 0;
 }
 
 .checkbox-input:checked ~ .checkbox-icon {
-  border: none;
-}
-
-.checkbox-input:checked ~ .checkbox-icon-svg {
-  visibility: visible;
+  border: 2px solid var(--accent-text-color);
+  background-color: var(--accent-text-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .checkbox-input:focus ~ .checkbox-icon {
-  outline: 0;
+  outline: 3px solid #000;
   border-color: var(--accent-text-color);
 }
 
